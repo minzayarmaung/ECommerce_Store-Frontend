@@ -1,0 +1,30 @@
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+}
+/* Custom styling for Google button */
+.google-btn {
+  background-color: #ffffff;
+  color: #757575;
+  border: 1px solid #dbdbdb;
+}
+.google-btn:hover {
+  background-color: #f1f1f1;
+}
+.google-logo {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+body {
+  padding: 100px 0;
+  background-color: #efefef;
+}
+a,
+a:hover {
+  color: #333;
+}
+.hide {
+  display: none;
+}

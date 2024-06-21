@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponentComponent } from './components/login-component/login-component.component';
 import { SignupComponentComponent } from './components/signup-component/signup-component.component';
+import { ForgotpasswordComponentComponent } from './components/forgotpassword-component/forgotpassword-component.component';
+import { FormsModule } from '@angular/forms';
+import { EmployeeComponent } from './components/employee/employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponentComponent,
-    SignupComponentComponent
+    SignupComponentComponent,
+    ForgotpasswordComponentComponent,
+    EmployeeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
