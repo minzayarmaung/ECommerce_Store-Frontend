@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,6 @@ import { LoginComponentComponent } from './components/login-component/login-comp
 import { SignupComponentComponent } from './components/signup-component/signup-component.component';
 import { ForgotpasswordComponentComponent } from './components/forgotpassword-component/forgotpassword-component.component';
 import { FormsModule } from '@angular/forms';
-import { EmployeeComponent } from './components/employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +17,13 @@ import { EmployeeComponent } from './components/employee/employee.component';
     LoginComponentComponent,
     SignupComponentComponent,
     ForgotpasswordComponentComponent,
-    EmployeeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,49 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-x2jIvVZ8iJ3yLlsg4rOSFETP3cgWpTCsK0Jgj5eqs9klKmskCz3uI9ygm8w5Lx02dGdi1fOahW1U6U2r1k5qNw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
-</head>
-<body>
-
-    <nav>
-        <ul>
-        <li>
-            <a href="#">
-                <img src="assets/images/store_icon.png" alt="logo" width="80%" height="80%">
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="dashboard-nav" [@menuToggle]="isOpen ? 'open' : 'closed'">
+        <header>
+          <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a
+          ><a href="#" class="brand-logo"
+            ><i class="fas fa-store"></i> <span>PS Mobile</span></a
+          >
+        </header>
+        <nav class="dashboard-nav-list">
+          <a href="#" class="dashboard-nav-item"
+            ><i class="fas fa-home"></i> Home </a
+          ><a href="#" class="dashboard-nav-item active"
+            ><i class="fas fa-tachometer-alt"></i> dashboard </a
+          ><a href="#" class="dashboard-nav-item"
+            ><i class="fas fa-file-upload"></i> Upload
+          </a>
+          <div class="dashboard-nav-dropdown">
+            <a
+              href="#!"
+              class="dashboard-nav-item dashboard-nav-dropdown-toggle"
+              ><i class="fas fa-globe"></i> Languages
             </a>
-        </li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-
-        <li class="right-dropdown">
-            <a href="#"> 
-                <img src="assets/images/us_flag.png" alt="languages" width="30" height="30"> Languages ▾ </a>
-            <ul class="dropdown">
-                <li><a href="#"> <img src="assets/images/language_icons/usa.png" width="20" height="20" alt="EN"> English</a></li>
-                <li><a href="#"> <img src="assets/images/language_icons/myanmar.png" width="20" height="20" alt="MM"> မြန်မာစာ </a></li>
-                <li><a href="#"> <img src="assets/images/language_icons/japan.png" width="20" height="20" alt="JP"> Japanese</a></li>
-            </ul>
-        </li>
-
-        <li class="login">
-            <a href="#">
-                <img src="assets/images/Icons/login.png" alt="loginIcon" width="20" height="20"> Account 
+            <div class="dashboard-nav-dropdown-menu">
+              <a href="#" class="dashboard-nav-dropdown-item">
+                <img
+                  src="assets/images/language_icons/usa.png"
+                  alt="English flag"
+                  width="20"
+                  height="20"
+                  class="flag-icon"
+                />
+                English
+              </a>
+              <a href="#" class="dashboard-nav-dropdown-item">
+                <img
+                  src="assets/images/language_icons/myanmar.png"
+                  alt="Myanmar flag"
+                  width="20"
+                  height="20"
+                  class="flag-icon"
+                />
+                မြန်မာစာ
+              </a>
+              <a href="#" class="dashboard-nav-dropdown-item">
+                <img
+                  src="assets/images/language_icons/japan.png"
+                  alt="Japanese flag"
+                  width="20"
+                  height="20"
+                  class="flag-icon"
+                />
+                Japanese
+              </a>
+            </div>
+          </div>
+          <div class="dashboard-nav-dropdown">
+            <a
+              href="#!"
+              class="dashboard-nav-item dashboard-nav-dropdown-toggle"
+              ><i class="fas fa-users"></i> Users
             </a>
-            <ul class="dropdown">
-                <li><a href="/login">Login</a></li>
-                <li><a href="/signup">SignUp</a></li>
-            </ul>
-        </li>
-        
-
-        </ul>
-
-    </nav>
-
-</body>
+            <div class="dashboard-nav-dropdown-menu">
+              <a href="#" class="dashboard-nav-dropdown-item">All</a
+              ><a href="#" class="dashboard-nav-dropdown-item">Subscribed</a
+              ><a href="#" class="dashboard-nav-dropdown-item">Non-subscribed</a
+              ><a href="#" class="dashboard-nav-dropdown-item">Banned</a
+              ><a href="#" class="dashboard-nav-dropdown-item">New</a>
+            </div>
+          </div>
+          <div class="dashboard-nav-dropdown">
+            <a
+              href="#!"
+              class="dashboard-nav-item dashboard-nav-dropdown-toggle"
+              ><i class="fas fa-money-check-alt"></i> Payments
+            </a>
+            <div class="dashboard-nav-dropdown-menu">
+              <a href="#" class="dashboard-nav-dropdown-item">All</a
+              ><a href="#" class="dashboard-nav-dropdown-item">Recent</a
+              ><a href="#" class="dashboard-nav-dropdown-item"> Projections</a>
+            </div>
+          </div>
+          <a href="#" class="dashboard-nav-item"
+            ><i class="fas fa-cogs"></i> Settings
+          </a>
+          <div class="dashboard-nav-dropdown">
+            <a
+              href="#!"
+              class="dashboard-nav-item dashboard-nav-dropdown-toggle"
+              ><i class="fas fa-user"></i> Account
+            </a>
+            <div class="dashboard-nav-dropdown-menu">
+              <a href="/login" class="dashboard-nav-dropdown-item">Login</a
+              ><a href="/signup" class="dashboard-nav-dropdown-item"
+                >Register</a
+              >
+            </div>
+          </div>
+          <div class="nav-item-divider"></div>
+          <a href="#" class="dashboard-nav-item"
+            ><i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </nav>
+      </div>
+      <div class="dashboard-app">
+        <header class="dashboard-toolbar">
+          <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+        </header>
+        <div class="dashboard-content">
+          <div class="container">
+            <div class="card">
+              <div class="card-header">
+                <h1>Welcome back Zayar</h1>
+              </div>
+              <div class="card-body">
+                <p>Your account type is: Administrator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
