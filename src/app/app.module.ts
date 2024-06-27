@@ -9,6 +9,7 @@ import { LoginComponentComponent } from './components/login-component/login-comp
 import { SignupComponentComponent } from './components/signup-component/signup-component.component';
 import { ForgotpasswordComponentComponent } from './components/forgotpassword-component/forgotpassword-component.component';
 import { FormsModule } from '@angular/forms';
+import { UserListComponent } from './components/user-component/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponentComponent,
     SignupComponentComponent,
     ForgotpasswordComponentComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,
