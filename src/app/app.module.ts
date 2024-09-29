@@ -10,6 +10,9 @@ import { SignupComponentComponent } from './components/signup-component/signup-c
 import { ForgotpasswordComponentComponent } from './components/forgotpassword-component/forgotpassword-component.component';
 import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './components/user-component/user-list/user-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { UserListComponent } from './components/user-component/user-list/user-li
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

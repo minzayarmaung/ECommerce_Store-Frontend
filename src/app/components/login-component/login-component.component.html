@@ -16,7 +16,7 @@
 />
 
 <div class="container">
-  <form class="login-form p-4 border rounded shadow" action="#" method="POST">
+  <form class="login-form p-4 border rounded shadow" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
     <h2 class="text-center mb-4">Login</h2>
     <div class="form-group">
       <label for="username">Username</label>
@@ -25,6 +25,7 @@
         id="username"
         class="form-control"
         placeholder="Enter your username or email"
+        formControlName="username"
         required
       />
     </div>
@@ -36,6 +37,7 @@
           [type]="showPassword ? 'text' : 'password'"
           class="form-control"
           id="password-field"
+          formControlName="password"
           placeholder="Enter your password"
           required
         />
