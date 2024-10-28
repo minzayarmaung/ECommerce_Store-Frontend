@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
@@ -15,6 +14,8 @@ export class LoginComponentComponent {
   public showPasswordOnPress: boolean | undefined;
   loginForm: any;
 
+  private url = 'http://localhost:8080/auth/signin';
+
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],
@@ -26,14 +27,12 @@ export class LoginComponentComponent {
     if (this.loginForm.valid) {
       const formData = this.loginForm.value;
       
-      this.http.post('http://your-backend-api.com/login', formData).subscribe({
+      this.http.post(this.url, formData).subscribe({
         next: (response: any) => {
-          // Handle successful login (e.g., navigate to dashboard)
           console.log('Login successful:', response);
-          this.router.navigate(['/dashboard']); // Redirect to a dashboard page
+          this.router.navigate(['/']); 
         },
         error: (error) => {
-          // Handle login error (e.g., show error message)
           console.error('Login failed:', error);
           alert('Login failed, please check your credentials');
         }
