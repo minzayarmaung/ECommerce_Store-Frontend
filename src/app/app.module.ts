@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './components/user-component/user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LayoutComponent } from './components/layout/layout.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignupComponentComponent,
     ForgotpasswordComponentComponent,
     UserListComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,

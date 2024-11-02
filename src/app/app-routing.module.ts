@@ -5,14 +5,23 @@ import { LoginComponentComponent } from './components/login-component/login-comp
 import { ForgotpasswordComponentComponent } from './components/forgotpassword-component/forgotpassword-component.component';
 import { SignupComponentComponent } from './components/signup-component/signup-component.component';
 import { UserListComponent } from './components/user-component/user-list/user-list.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponentComponent },
-  { path: 'signup', component: SignupComponentComponent },
-  { path: 'forgotpassword', component: ForgotpasswordComponentComponent },
-  { path: 'alluserlist', component: UserListComponent },
+  { 
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', component: HomeComponent }, 
+      { path: 'home', component: HomeComponent },
+      { path: 'login', component: LoginComponentComponent },
+      { path: 'alluserlist', component: UserListComponent },
+      { path: 'signup', component: SignupComponentComponent }
+    ]
+  },
+  { path: '', redirectTo: '/login', pathMatch: 'full' } 
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
