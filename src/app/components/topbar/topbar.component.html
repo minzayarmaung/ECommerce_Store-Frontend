@@ -1,0 +1,19 @@
+<div class="dashboard-app">
+  <header class="dashboard-toolbar">
+    <a href="#!" class="menu-toggle" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </a>
+    <div class="dashboard-nav" [@menuToggle]="isOpen ? 'open' : 'closed'">
+      <div class="content">
+        <nav class="nav-items">
+          <ul>
+            <li><a href="#!">Home</a></li>
+            <li><a href="#!">Profile</a></li>
+            <li><a href="#!">Settings</a></li>
+            <li><a href="#!">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</div>

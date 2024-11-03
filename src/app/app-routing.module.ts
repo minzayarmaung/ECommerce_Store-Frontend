@@ -6,6 +6,7 @@ import { ForgotpasswordComponentComponent } from './components/forgotpassword-co
 import { SignupComponentComponent } from './components/signup-component/signup-component.component';
 import { UserListComponent } from './components/user-component/user-list/user-list.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
 
 const routes: Routes = [
   { 

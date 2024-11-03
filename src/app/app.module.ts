@@ -13,6 +13,7 @@ import { UserListComponent } from './components/user-component/user-list/user-li
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LayoutComponent } from './components/layout/layout.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
 
 
 @NgModule({
@@ -24,6 +25,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     ForgotpasswordComponentComponent,
     UserListComponent,
     LayoutComponent,
+    TopbarComponent
+
   ],
   imports: [
     BrowserModule,
