@@ -12,14 +12,13 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', component: HomeComponent }, 
-      { path: 'home', component: HomeComponent },
+      { path: 'home', component: HomeComponent }, 
       { path: 'login', component: LoginComponentComponent },
       { path: 'alluserlist', component: UserListComponent },
       { path: 'signup', component: SignupComponentComponent }
     ]
   },
-  { path: '', redirectTo: '/login', pathMatch: 'full' } 
+  { path: '', redirectTo: '/', pathMatch: 'full' } 
 ];
 
 
