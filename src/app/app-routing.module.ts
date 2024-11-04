@@ -19,7 +19,7 @@ const routes: Routes = [
       { path: 'signup', component: SignupComponentComponent }
     ]
   },
-  { path: '', redirectTo: '/', pathMatch: 'full' } 
+  { path: '', redirectTo: '/home', pathMatch: 'full' } 
 ];
 
 

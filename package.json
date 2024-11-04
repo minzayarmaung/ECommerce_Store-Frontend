@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@ngx-translate/core": "^16.0.3",
+    "@ngx-translate/http-loader": "^16.0.0",
     "bootstrap": "^5.3.3",
     "ngx-bootstrap": "^7.1.0",
     "psmobile": "file:",
