@@ -5,30 +5,9 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, ElementRef, NgModule, Renderer2 } from '@angular/core';
-import { NgModel } from '@angular/forms';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateService } from '@ngx-translate/core';
 
-export function HttpLoaderFactory( http:HttpClient ){
-    return new TranslateHttpLoader ( http, './assets/i18n/', ',json' );
-}
-
-@NgModule({
-  declarations: [],
-  imports: [
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-    
-  ],
-})
 export class AppModule {}
 
 @Component({
@@ -60,8 +39,10 @@ export class HomeComponent {
   toggleMenu() {
     this.isOpen = !this.isOpen;
   }
-  constructor(private renderer: Renderer2, private el: ElementRef) {
+  constructor(private renderer: Renderer2, private el: ElementRef , private translate: TranslateService) {
     this.mobileScreen = window.matchMedia('(max-width: 990px)');
+    this.translate.addLangs(['en','mm','jp']);
+    this.translate.setDefaultLang('en');
   }
 
   ngOnInit(): void {
@@ -148,6 +129,13 @@ export class HomeComponent {
       currentElement = currentElement.parentElement;
     }
     return null;
+  }
+
+  // Translate 
+  changeLanguage(lang: string):void{
+    this.translate.use(lang);
+    console.log('Current language:', this.translate.currentLang);
+
   }
 
 } 

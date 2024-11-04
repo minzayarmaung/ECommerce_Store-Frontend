@@ -10,10 +10,16 @@ import { SignupComponentComponent } from './components/signup-component/signup-c
 import { ForgotpasswordComponentComponent } from './components/forgotpassword-component/forgotpassword-component.component';
 import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './components/user-component/user-list/user-list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LayoutComponent } from './components/layout/layout.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 
 @NgModule({
@@ -25,16 +31,25 @@ import { TopbarComponent } from './components/topbar/topbar.component';
     ForgotpasswordComponentComponent,
     UserListComponent,
     LayoutComponent,
-    TopbarComponent
+    TopbarComponent,
+
 
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],

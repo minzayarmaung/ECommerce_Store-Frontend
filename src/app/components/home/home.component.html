@@ -38,20 +38,20 @@
         </header>
         <nav class="dashboard-nav-list">
           <a href="#" class="dashboard-nav-item"
-            ><i class="fas fa-home"></i> Home </a
+            ><i class="fas fa-home"></i> {{ 'Home' | translate }} </a
           ><a href="#" class="dashboard-nav-item active"
-            ><i class="fas fa-tachometer-alt"></i> dashboard </a
+            ><i class="fas fa-tachometer-alt"></i> {{ 'Dashboard' | translate }} </a
           ><a href="#" class="dashboard-nav-item"
-            ><i class="fas fa-file-upload"></i> Upload
+            ><i class="fas fa-file-upload"></i> {{ 'Upload' | translate }}
           </a>
           <div class="dashboard-nav-dropdown">
             <a
               href="#!"
               class="dashboard-nav-item dashboard-nav-dropdown-toggle"
-              ><i class="fas fa-globe"></i> Languages
+              ><i class="fas fa-globe"></i> {{ 'Languages' | translate }}
             </a>
             <div class="dashboard-nav-dropdown-menu">
-              <a href="#" class="dashboard-nav-dropdown-item">
+              <a href="javascript:void(0)" class="dashboard-nav-dropdown-item" (click)="changeLanguage('en')">
                 <img
                   src="assets/images/language_icons/usa.png"
                   alt="English flag"
@@ -61,7 +61,7 @@
                 />
                 English
               </a>
-              <a href="#" class="dashboard-nav-dropdown-item">
+              <a href="javascript:void(0)" class="dashboard-nav-dropdown-item" (click)="changeLanguage('mm')">
                 <img
                   src="assets/images/language_icons/myanmar.png"
                   alt="Myanmar flag"
@@ -71,7 +71,7 @@
                 />
                 မြန်မာစာ
               </a>
-              <a href="#" class="dashboard-nav-dropdown-item">
+              <a href="javascript:void(0)" class="dashboard-nav-dropdown-item" (click)="changeLanguage('jp')" >
                 <img
                   src="assets/images/language_icons/japan.png"
                   alt="Japanese flag"

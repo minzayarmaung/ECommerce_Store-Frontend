@@ -13,15 +13,14 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'home', component: HomeComponent }, 
+      { path: '', component: HomeComponent }, 
       { path: 'login', component: LoginComponentComponent },
       { path: 'alluserlist', component: UserListComponent },
       { path: 'signup', component: SignupComponentComponent }
     ]
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' } 
+  { path: '', redirectTo: '/', pathMatch: 'full' } 
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
