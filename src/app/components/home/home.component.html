@@ -48,7 +48,7 @@
             <a
               href="#!"
               class="dashboard-nav-item dashboard-nav-dropdown-toggle"
-              ><i class="fas fa-globe"></i> {{ 'Languages' | translate }}
+              ><i class="fas fa-globe"></i> {{ 'Language' | translate }}
             </a>
             <div class="dashboard-nav-dropdown-menu">
               <a href="javascript:void(0)" class="dashboard-nav-dropdown-item" (click)="changeLanguage('en')">
@@ -87,21 +87,21 @@
             <a
               href="#!"
               class="dashboard-nav-item dashboard-nav-dropdown-toggle"
-              ><i class="fas fa-users"></i> Users
+              ><i class="fas fa-users"></i> {{ 'Users' | translate }}
             </a>
             <div class="dashboard-nav-dropdown-menu">
-              <a href="/alluserlist" class="dashboard-nav-dropdown-item">All</a
-              ><a href="#" class="dashboard-nav-dropdown-item">Subscribed</a
-              ><a href="#" class="dashboard-nav-dropdown-item">Non-subscribed</a
-              ><a href="#" class="dashboard-nav-dropdown-item">Banned</a
-              ><a href="#" class="dashboard-nav-dropdown-item">New</a>
+              <a href="/alluserlist" class="dashboard-nav-dropdown-item">{{ 'All' | translate }}</a
+              ><a href="#" class="dashboard-nav-dropdown-item">{{ 'Subscribed' | translate }}</a
+              ><a href="#" class="dashboard-nav-dropdown-item">{{ 'Non-subscribed' | translate }}</a
+              ><a href="#" class="dashboard-nav-dropdown-item">{{ 'Banned' | translate }}</a
+              ><a href="#" class="dashboard-nav-dropdown-item">{{ 'New' | translate }}</a>
             </div>
           </div>
           <div class="dashboard-nav-dropdown">
             <a
               href="#!"
               class="dashboard-nav-item dashboard-nav-dropdown-toggle"
-              ><i class="fas fa-money-check-alt"></i> Payments
+              ><i class="fas fa-money-check-alt"></i> {{ 'Payment' | translate }}
             </a>
             <div class="dashboard-nav-dropdown-menu">
               <a href="#" class="dashboard-nav-dropdown-item">All</a
@@ -110,24 +110,24 @@
             </div>
           </div>
           <a href="#" class="dashboard-nav-item"
-            ><i class="fas fa-cogs"></i> Settings
+            ><i class="fas fa-cogs"></i> {{ 'Settings' | translate }}
           </a>
           <div class="dashboard-nav-dropdown">
             <a
               href="#!"
               class="dashboard-nav-item dashboard-nav-dropdown-toggle"
-              ><i class="fas fa-user"></i> Account
+              ><i class="fas fa-user"></i> {{ 'Account' | translate }}
             </a>
             <div class="dashboard-nav-dropdown-menu">
-              <a href="/login" class="dashboard-nav-dropdown-item">Login</a
+              <a href="/login" class="dashboard-nav-dropdown-item">{{ 'Login' | translate }}</a
               ><a href="/signup" class="dashboard-nav-dropdown-item"
-                >Register</a
+                >{{ 'Register' | translate }}</a
               >
             </div>
           </div>
           <div class="nav-item-divider"></div>
           <a href="#" class="dashboard-nav-item"
-            ><i class="fas fa-sign-out-alt"></i> Logout
+            ><i class="fas fa-sign-out-alt"></i> {{ 'Logout' | translate }}
           </a>
         </nav>
       </div>
