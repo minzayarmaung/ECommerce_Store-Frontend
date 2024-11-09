@@ -1,15 +1,12 @@
+.layout {
+  height: 100vh; /* Takes the full viewport height */
+  display: flex;
+  overflow: hidden;
+}
 
-.main-layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Full viewport height */
-  }
-  
-  .content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-  }
-  
+.main-content {
+  flex: 1; /* Takes remaining space */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}

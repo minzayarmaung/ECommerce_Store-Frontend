@@ -1,11 +1,18 @@
 {
-    "HOME": "ホーム",
-    "DASHBOARD": "ダッシュボード",
-    "UPLOAD": "アップロード",
-    "USERS": "ユーザー",
-    "PAYMENTS": "支払い",
-    "SETTINGS": "設定",
-    "ACCOUNT": "アカウント",
-    "LOGOUT": "ログアウト"
-  }
-  
+  "Home": "ホーム",
+  "Dashboard": "ダッシュボード",
+  "Upload": "アップロード",
+  "Users": "ユーザー",
+  "Payment": "支払い",
+  "Settings": "設定",
+  "Account": "アカウント",
+  "Logout": "ログアウト",
+  "Language": "言語",
+  "All": "すべて",
+  "Subscribed": "登録済み",
+  "Non-subscribed": "未登録",
+  "Banned": "禁止されたユーザー",
+  "New": "新規ユーザー",
+  "Login": "ログイン",
+  "Register": "登録"
+}

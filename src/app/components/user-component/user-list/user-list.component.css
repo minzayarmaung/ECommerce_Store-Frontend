@@ -1,0 +1,11 @@
+table {
+    width: 100%;
+    max-width: 100%; /* Ensures it does not exceed the container width */
+    overflow-x: auto; /* Adds scroll if table overflows horizontally */
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+    
