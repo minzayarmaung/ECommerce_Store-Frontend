@@ -19,6 +19,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InvoicelistComponent } from './components/api/invoicelist/invoicelist.component';
 import { InvoiceComponent } from './components/api/invoice/invoice.component';
+import { UserlistComponent } from './components/api/userlist/userlist.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -38,6 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DashboardComponent,
     InvoicelistComponent,
     InvoiceComponent,
+    UserlistComponent,
 
 
   ],
