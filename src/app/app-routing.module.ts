@@ -5,6 +5,7 @@ import { LoginComponentComponent } from './components/login-component/login-comp
 import { SignupComponentComponent } from './components/signup-component/signup-component.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { UserListComponent } from './components/user-component/user-list/user-list.component';
+import { InvoicelistComponent } from './components/api/invoicelist/invoicelist.component';
 
 const routes: Routes = [
   {
@@ -15,9 +16,11 @@ const routes: Routes = [
       { path: 'alluserlist', component: UserListComponent },
       { path: 'login', component: LoginComponentComponent },
       { path: 'signup', component: SignupComponentComponent },
+      
     ],
   },
   { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'invoicelist', component: InvoicelistComponent }
 ];
 
 @NgModule({
